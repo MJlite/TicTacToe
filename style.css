@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #f2c14e;
+  --winning-blocks: #2d414b;
+}
+
+body {
+  color: var(--orange);
+  font-family: "Finger Paint", cursive;
+}
+
+.container {
+  background-color: #658fa3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+#restartBtn {
+  background: #f2c14e;
+  padding: 10px 15px;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+#restartBtn:hover {
+  transition: 0.2s ease-in-out;
+  transform: translateY(-2px);
+}
+
+#boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 133px);
+  height: 399px;
+  width: 399px;
+}
+
+.box {
+  height: 133px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+/* nth child k baad walo k bottm brder none */
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
